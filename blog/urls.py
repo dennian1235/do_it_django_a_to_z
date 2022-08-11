@@ -22,6 +22,6 @@ from . import views
 
 
 urlpatterns = [
+    path('',views.PostList.as_view()),s
     path('<int:pk>/',views.single_post_page),
-    path('',views.index),
 ]
