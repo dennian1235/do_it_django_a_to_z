@@ -68,37 +68,42 @@
 
 
 
-          <div class="container">
+          <div class="container" >
             <div class="row my-3">
-                <div class="col-md-8 col-lg-9">
+                <div class="col-md-8 col-lg-9"id = "main-area">
                     <h1>Blog</h1>
                     <p>아직 작성되지 않았습니다</p>
                      <!-- Blog post-->
-                    {% for p in post_list %}
-                     <div class="card mb-4">
-                         {% if p.head_image %}
-                         <a href="{{ p.get_absolute_url }}">
-                            <img class="card-img-top" src="{{ p.head_image.url }}" alt="{{ p }} head image"></a>
-                         {% else %}
-                            <a href="{{ p.get_absolute_url }}">
-                            <img class="card-img-top" src="https://picsum.photos/seed/{{ p.id }}800/200" alt="random_image"></a>
-                         {% endif %}
-                        <div class="card-body">
-                            <h2 class="card-title h4">{{ p.title }}</h2>
-                            {% if p.hook_text %}
-                                <h5 class="text-muted">{{ p.hook_text }}</h5>
-                            {% endif %}
+                    {% if post_list.exists %}
+                        {% for p in post_list %}
+                         <div class="card mb-4">
+                             {% if p.head_image %}
+                             <a href="{{ p.get_absolute_url }}">
+                                <img class="card-img-top" src="{{ p.head_image.url }}" alt="{{ p }} head image"></a>
+                             {% else %}
+                                <a href="{{ p.get_absolute_url }}">
+                                <img class="card-img-top" src="https://picsum.photos/seed/{{ p.id }}800/200" alt="random_image"></a>
+                             {% endif %}
+                            <div class="card-body">
+                                <h2 class="card-title h4">{{ p.title }}</h2>
+                                {% if p.hook_text %}
+                                    <h5 class="text-muted">{{ p.hook_text }}</h5>
+                                {% endif %}
 
-                         </div>
-                            <div class="card-footer text-muted" >
-                             Posted on {{ p.created_at }} by
-                             <a href="#">작성자가 쓸위치(개발예정)</a>
-                         </div>
-                            <p class="card-text">{{ p.content | truncatewords:25 }}</p>
-                            <a href="{{ p.get_absolute_url }}" class="btn btn-primary" href="#!">Read more →</a>
+                             </div>
+                                <div class="card-footer text-muted" >
+                                 Posted on {{ p.created_at }} by
+                                 <a href="#">작성자가 쓸위치(개발예정)</a>
+                             </div>
+                                <p class="card-text">{{ p.content | truncatewords:25 }}</p>
+                                <a href="{{ p.get_absolute_url }}" class="btn btn-primary" href="#!">Read more →</a>
 
-                    </div>
-                    {% endfor %}
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <h3>아직 게시물이 없습니다.</h3>
+                    {% endif %}
+
                 </div>
                 <div class="col-md-4 col-lg-3">
                      <!-- Search widget-->
