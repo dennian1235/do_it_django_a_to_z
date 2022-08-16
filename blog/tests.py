@@ -7,6 +7,24 @@ class TestView(TestCase):
         self.client = Client()
 
 
+    def navbar_test(self, soup):
+        navbar = soup.nav
+        self.assertIn('블로그', navbar.text)
+        self.assertIn('About me', navbar.text)
+
+        logo_btn = navbar.find('a', text='스마트부산')
+        self.assertEqual(logo_btn.attrs['href'], '/')
+
+        logo_btn = navbar.find('a', text='Home')
+        self.assertEqual(logo_btn.attrs['href'], '/')
+
+        logo_btn = navbar.find('a', text='블로그')
+        self.assertEqual(logo_btn.attrs['href'], '/blog/')
+
+        logo_btn = navbar.find('a', text='About me')
+        self.assertEqual(logo_btn.attrs['href'], '/about_me/')
+
+
     def test_post_list(self):
 
         response = self.client.get('/blog/')
@@ -16,10 +34,7 @@ class TestView(TestCase):
         soup = BeautifulSoup(response.content, 'html.parser')
         self.assertEqual(soup.title.text, 'blog')
 
-        navbar = soup.nav
-
-        self.assertIn('블로그',navbar.text)
-        self.assertIn('About me', navbar.text)
+        self.navbar_test(soup)
 
         self.assertEqual(Post.objects.count(),0)
 
@@ -62,10 +77,8 @@ class TestView(TestCase):
         soup = BeautifulSoup(response.content, 'html.parser')
 
 
-        navbar = soup.nav
+        self.navbar_test(soup)
 
-        self.assertIn('블로그',navbar.text)
-        self.assertIn('About me', navbar.text)
 
         self.assertIn(post_001.title, soup.title.text)
 
