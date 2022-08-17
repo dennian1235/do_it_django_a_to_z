@@ -1,7 +1,7 @@
 {% extends 'blog/base.html'%}
 
 {% block main_area %}
-                    <h1>Blog {% if category %}<span class="badge rounded-pill bg-primary">{{ category }}</span>{% endif %}</h1>
+    <h1 xmlns="http://www.w3.org/1999/html">Blog {% if category %}<span class="badge rounded-pill bg-primary">{{ category }}</span>{% endif %}</h1>
 
                      <!-- Blog post-->
                     {% if post_list.exists %}
@@ -26,15 +26,25 @@
                                 {% if p.hook_text %}
                                     <h5 class="text-muted">{{ p.hook_text }}</h5>
                                 {% endif %}
-                            </div>
-                                <div class="card-footer text-muted" >
-                                 Posted on {{ p.created_at }} by
-                                 <a href="#">{{ p.author | upper }}</a>
-                           </div>
+
                                 <p class="card-text">{{ p.content | truncatewords:25 }}</p>
+                                {% if p.tags.exists %}
+                                    <i class="fa-solid fa-tags"></i>
+                                    {% for tag in p.tags.iterator %}
+                                        <a href="{{ tag.get_absolute_url }}"><span class="badge bg-light text-dark">{{ tag }}</span></a>
+                                    {% endfor %}
+                                    </br>
+                                    </br>
+                                {% endif %}
                                 <a href="{{ p.get_absolute_url }}" class="btn btn-primary" href="#!">Read more →</a>
 
-                        </div>
+                            </div>
+                                </div>
+                                    <div class="card-footer text-muted" >
+                                     Posted on {{ p.created_at }} by
+                                     <a href="#">{{ p.author | upper }}</a>
+                               </div>
+
                         {% endfor %}
                     {% else %}
                         <h3>아직 게시물이 없습니다.</h3>
@@ -53,3 +63,8 @@
                             <li class="page-item"><a class="page-link" href="#!">Older</a></li>
                         </ul>
  {% endblock %}
+
+
+
+
+
