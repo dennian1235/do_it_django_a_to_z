@@ -49,11 +49,11 @@
                                 {% if post.file_upload %}
                                     <a href="{{ post.file_upload.url }}"  class="btn btn-outline-primary" role = "button">
                                         Download:
-                                        {% if post.get_file_exit == 'csv' %}
+                                        {% if post.get_file_ext == 'csv' %}
                                             <i class="fas fa-file-csv"></i>
-                                        {% elif post.get_file_exit == 'xlsx'  or post.get_file_exit == 'xls'%}
+                                        {% elif post.get_file_ext == 'xlsx'  or post.get_file_exit == 'xls'%}
                                             <i class="fa-solid fa-file-excel"></i>
-                                        {% elif post.get_file_exit == 'docx' or post.get_file_exit == 'doc'%}
+                                        {% elif post.get_file_ext == 'docx' or post.get_file_exit == 'doc'%}
                                             <i class="fas fa-file-word"></i>
                                         {% else %}
                                             <i class="far fa-file"></i>
