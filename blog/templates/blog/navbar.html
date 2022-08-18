@@ -1,4 +1,5 @@
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+{% load socialaccount %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
               <a class="navbar-brand" href="/">스마트부산</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +21,16 @@
                   </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLInk" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ user.username }}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLInk">
+                                <a class="dropdown-item" href="/accounts/logout/">Log Out</a>
+                            </div>
+                    </li>
+                    {% endif %}
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
                     </li>
@@ -38,11 +49,11 @@
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-md-6 col-sm-12 d-grid gap-2">
-                                    <button type="button" class="btn btn-outline-dark bt-sm gap-2"><i class="fa-brands fa-google"></i>&nbsp&nbspLogin with Google</button>
-                                    <button type="button" class="btn btn-outline-dark bt-sm"><i class="fa-solid fa-user"></i>&nbsp&nbspLogin with Username</button>
+                                    <a role="button" class="btn btn-outline-dark bt-sm gap-2" href="{% provider_login_url 'google' %}"><i class="fa-brands fa-google"></i>&nbsp&nbspLogin with Google</a>
+                                    <a role="button" class="btn btn-outline-dark bt-sm gap-2" href="/accounts/login/"><i class="fa-regular fa-envelope"></i></i>&nbsp&nbspLogin with Username</a>
                                 </div>
-                                <div class="col-md-6 col-sm-12 d-grid gap-2">
-                                    <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-envelope"></i>&nbsp&nbspSign up with E-mail</button>
+                                <div class="col-md-6">
+                                    <a role="button" class="btn btn-outline-dark bt-sm gap-2" href="/accounts/signup/"><i class="fa-regular fa-envelope"></i></i>&nbsp&nbspSign Up with E-mail</a>
                                 </div>
                             </div>
 
