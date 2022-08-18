@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'crispy_forms',
+    'crispy_bootstrap5',
+    'markdownx',
     'blog',
     'single_pages',
 ]
@@ -125,7 +127,8 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/_media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap5'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
