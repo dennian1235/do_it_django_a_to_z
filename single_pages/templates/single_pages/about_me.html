@@ -1,19 +1,100 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>대학생 이호용입니다</title>
+    <title>About 이호용</title>
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/css/bootstrap.min.css' %}"  media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/about_me.css' %}"  media="screen">
+    <script src="https://kit.fontawesome.com/61f03e174c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<nav>
-    <a href="/blog/">Blog</a>
-    <a href="/about_me/">About_me</a>
-</nav>
+    {% include 'blog/navbar.html' %}
 
-    <h1>안녕하세요. 이호용입니다.</h1>
-    <h2>이력</h2>
-    <h2>Portfolio</h2>
-    <h3>아직 공사중</h3>
+
+<section>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1> 안녕하세요. 이호용입니다 </h1>
+                <br/>
+                <p class="lead">
+                    저는 음악과 운동을 즐깁니다. <br/>
+                    이번 sw프로젝트를 통해 많이 배워나가고 있습니다..
+                </p>
+                <ul>
+                    <li>Education</li>
+                    <ul>
+                        <li> 출생년도 : 1992.02.01 ~ </li>
+                        <li> 초등학교 : 무룡초등학교</li>
+                        <li> 중학교 : 동중학교</li>
+                        <li> 고등학교 : 울산고등학교 </li>
+                        <li> 대학교 : 동아대학교(현재 스마트헬스케어융합전공) </li>
+                    </ul>
+                     <li> 전공 </li>
+                    <ul>
+                        <li> 스마트헬스케어 </li>
+                    </ul>
+                    <li> 자격증 </li>
+                    <ul>
+                        <li> - </li>
+                    </ul>
+
+
+
+                </ul>
+
+
+
+
+
+
+            </div>
+            <div class="col-lg-4">
+                <img class="img-fluid" src="{% static 'single_pages/images/사람.jpg' %}">
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="bg-light margin-for-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>PORTFOLIO</h1>
+            </div>
+        </div>
+            <div class="card-group">
+              <div class="card">
+                <img src="{% static 'single_pages/images/웨일즈_밀레니엄_센터,_카디프_베이,_2022,_빙,_5k,_사진벽지_5120x3200[10wallpaper.com].jpg' %}" class="card-img-top" alt="메시">
+                <div class="card-body">
+                  <h5 class="card-title">웨일즈 밀레니엄 센터</h5>
+                  <p class="card-text">웨일스 밀레니엄 센터는 1개의 대형 극장과 2개의 작은 홀과 상점, 바, 레스토랑으로 구성되어 있다.</p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'single_pages/images/Domturm,_프랑크푸르트,_독일,_2022,_도시,_5K,_사진벽지_5120x3200[10wallpaper.com].jpg' %}" class="card-img-top" alt="독일">
+                <div class="card-body">
+                  <h5 class="card-title">프랑크푸르트</h5>
+                  <p class="card-text">프랑크푸르트의 저녁시간이다</p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'single_pages/images/차카_솔트_레이크,_보트,_2021,_풍경,_5K,_HD,_사진벽지_5120x3200[10wallpaper.com].jpg' %}" class="card-img-top" alt="여행">
+                <div class="card-body">
+                  <h5 class="card-title">차카 솔트 레이크</h5>
+                  <p class="card-text">차카 호수는 칭하이의 주요 관광지이자 주요 소금 광산입니다.</p>
+                </div>
+              </div>
+            </div>
+    </div>
+</section>
+
+{% include 'blog/footer.html' %}
+    </div>
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
 </body>
 </html>

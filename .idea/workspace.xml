@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2124c30-d501-48cf-95e1-3af6d3d67187" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/single_pages/static/single_pages/css/landing.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/single_pages/static/single_pages/images/hd-wallpaper-2242213.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/single_pages/static/single_pages/css/about_me.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/single_pages/static/single_pages/images/2018_FIFA_월드컵,_아르헨티나,_라이오넬_메시벽지_2880x1800[10wallpaper.com].jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/single_pages/static/single_pages/images/Domturm,_프랑크푸르트,_독일,_2022,_도시,_5K,_사진벽지_5120x3200[10wallpaper.com].jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/single_pages/static/single_pages/images/사람.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/single_pages/static/single_pages/images/웨일즈_밀레니엄_센터,_카디프_베이,_2022,_빙,_5k,_사진벽지_5120x3200[10wallpaper.com].jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/single_pages/static/single_pages/images/차카_솔트_레이크,_보트,_2021,_풍경,_5K,_HD,_사진벽지_5120x3200[10wallpaper.com].jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_pages/templates/single_pages/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/landing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_pages/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single_pages/templates/single_pages/about_me.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_pages/templates/single_pages/about_me.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +45,13 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/github/do_it_django_a_to_z/blog/templates/blog",
+    "last_opened_file_path": "C:/github/do_it_django_a_to_z/single_pages/static/single_pages/css",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\github\do_it_django_a_to_z\single_pages\static\single_pages\css" />
       <recent name="C:\github\do_it_django_a_to_z\blog\templates\blog" />
       <recent name="C:\github\do_it_django_a_to_z\single_pages" />
       <recent name="C:\github\do_it_django_a_to_z\blog" />
